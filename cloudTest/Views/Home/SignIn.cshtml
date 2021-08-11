@@ -1,0 +1,16 @@
+﻿@model cloudTest.Models.SignInDto
+@{
+    ViewBag.Title = "SignIn";
+}
+
+<h2>SignIn</h2>
+@using (Html.BeginForm("SignIn", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-position">
+        <div class="form-group w-100">
+            <label for="User">User</label>
+            @Html.TextBoxFor(b => b.User, new { @class = "form-control", placeholder = "Enter your name", id = "User" })
+        </div>
+        <button type="submit" id="submit" class="btn btn-primary submit" style="display:block; margin:auto;">Sign In</button>
+    </div>
+}
